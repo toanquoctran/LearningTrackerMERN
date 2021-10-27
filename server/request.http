@@ -1,0 +1,53 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "tqtran11",
+    "password": "tqtran11"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "tqtran",
+    "password": "tqtran"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTc4MjcxNjQ5YWIzY2RlMTc1N2I2MDYiLCJpYXQiOjE2MzUyNjQyNzl9.k1zeuIeXsRpm0AySotfFSpNUgZetjqs9HsWJleLCssA
+
+{
+    "title": "React",
+    "description": "React",
+    "url": "react.com",
+    "status": "LEARNED"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTc3NjQwN2NkMTk1MjhhYTFjNWUwMWMiLCJpYXQiOjE2MzUyNjQ1NTh9.WGcKA-9Oo1FlfWrKdptXqBWChJhWobsL5mX2Vkf6wv4
+
+###
+
+PUT http://localhost:5000/api/posts/61776407cd19528aa1c5e01c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTc3NjQwN2NkMTk1MjhhYTFjNWUwMWMiLCJpYXQiOjE2MzUyNjQ1NTh9.WGcKA-9Oo1FlfWrKdptXqBWChJhWobsL5mX2Vkf6wv4
+
+{
+    "title": "NextJs",
+    "description": "NextJsss",
+    "url": "https://nextjs.org",
+    "status": "LEARNING"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/61776407cd19528aa1c5e01c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTc3NjQwN2NkMTk1MjhhYTFjNWUwMWMiLCJpYXQiOjE2MzUyNjQ1NTh9.WGcKA-9Oo1FlfWrKdptXqBWChJhWobsL5mX2Vkf6wv4
